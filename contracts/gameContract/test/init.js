@@ -8,8 +8,8 @@ var contracts = require('./contracts');
 var register= contracts.Register;
 var tbMgr= contracts.TableManager;
 var currency = contracts.CurrencyToken;
-var gameToken = contracts.gameToken
-var room=contracts.RoomManager;
+var gameTokentest = contracts.gameTokentest
+//var room=contracts.RoomManager;
 var notary= contracts.NotaryManager;
 var inter = contracts.InterManager;
 var croom=contracts.CroomManager;
@@ -26,36 +26,36 @@ var F=5;
 var G=6;
 
 function config_init(){
-    room.setauthority(authority.address,{gas:10000000});
+    //room.setauthority(authority.address,{gas:10000000});
     croom.setauthority(authority.address,{gas:10000000});
     tbMgr.setauthority(authority.address,{gas:10000000});
 
-    authority.grantContractAuth(room.address,{gas:10000000});
+    //authority.grantContractAuth(room.address,{gas:10000000});
     authority.grantContractAuth(croom.address,{gas:10000000});
     authority.grantContractAuth(tbMgr.address,{gas:10000000});
 
-    gameToken.setRoomMgr(room.address);
-    gameToken.setRoomMgr(croom.address);
-    gameToken.setTableMgr(tbMgr.address);
+    //gameToken.setRoomMgr(room.address);
+    gameTokentest.setRoomMgr(croom.address);
+    gameTokentest.setTableMgr(tbMgr.address);
 
-    inter.setRoomMgrAddr(room.address);
+    //inter.setRoomMgrAddr(room.address);
     inter.setRoomMgrAddr(croom.address);
     inter.setRoomMgrAddr(tbMgr.address);
 
-    notary.setRoomMgrAddr(room.address);
+    //notary.setRoomMgrAddr(room.address);
     notary.setRoomMgrAddr(croom.address);
     notary.setRoomMgrAddr(tbMgr.address);
 
 
-    room.setTokenAddr(gameToken.address);
-    croom.setTokenAddr(gameToken.address);
-    tbMgr.setTokenAddr(gameToken.address);
+    //room.setTokenAddr(gameToken.address);
+    croom.setTokenAddr(gameTokentest.address);
+    tbMgr.setTokenAddr(gameTokentest.address);
 
-    room.setInterAddr(inter.address);
+    //room.setInterAddr(inter.address);
     croom.setInterAddr(inter.address);
     tbMgr.setInterAddr(inter.address);
 
-    room.setNotaryAddr(notary.address);
+    //room.setNotaryAddr(notary.address);
     croom.setNotaryAddr(notary.address);
     tbMgr.setNotaryAddr(notary.address);
 }

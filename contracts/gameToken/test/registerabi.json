@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_name","type":"string"},{"name":"_contract","type":"address"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"string"}],"name":"get","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"}]

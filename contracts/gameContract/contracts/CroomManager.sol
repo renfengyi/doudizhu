@@ -5,7 +5,7 @@ import './TokenAbi.sol';
 import './InterAbi.sol';
 import './NotaryAbi.sol';
 import './SafeMath.sol';
-import './DataTime.sol';
+
 import './RLP.sol';
 
 contract CroomManager  is LibContract{
@@ -13,7 +13,7 @@ contract CroomManager  is LibContract{
     using RLP for bytes;
     using RLP for RLP.RLPItem;
     using RLP for RLP.Iterator;
-
+ 
     event JoinSittingQueen(address playerAddr, address roomAddr);
     event AllotTable(address roomAddr,uint tableid);
     event LeaveTable(address roomAddr, uint tbid, address playerAddr, uint pos);

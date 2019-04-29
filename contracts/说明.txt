@@ -1,0 +1,24 @@
+环境版本:
+    node@8.12.0
+    truffle@4.1.14
+
+依赖安装:
+    npm install -g web3@0.20.7;
+    cd ./contracts/gameContract;npm install;
+
+    cd ./contracts/ddzlua/sublua;npm install;
+
+    cd ./contracts/gameToken;npm install;
+
+合约部署:
+    #游戏合约部署
+    cd ./contracts/gameContract;truffle migrate --reset --network product;
+    #代币合约部署
+    cd ./contracts/gameToken;truffle migrate --reset --network product;
+    #lua脚本文件部署上链
+    cd ./contracts/ddzlua/sublua;truffle migrate --reset --network product;
+
+合约初始化:
+    #更新了 游戏合约 或者 代币合约 需要执行初始化
+    cd ./contracts/gameToken/cli;node init.js --nettwork product;
+    注:报缺少包错误,使用 npm install 包名  安装即可;

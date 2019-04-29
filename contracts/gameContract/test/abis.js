@@ -4,7 +4,7 @@ exports.NotaryManager = require("./abis/Notary");
 
 // game token
 exports.CurrencyToken = require("./abis/CurrencyToken");
-exports.gameToken = require("./abis/gameToken");
+exports.gameTokentest = require("./abis/gameTokentest");
 exports.Authority = require("./abis/Authority");
 
 // texas
@@ -13,4 +13,4 @@ exports.TableManager = require("./abis/TableManage");
 
 // doudizhu
 exports.CroomManager = require("./abis/CroomManager");
-exports.CroomManagerdev = require("./abis/CroomManagerdev");
+exports.CroomManagertest = require("./abis/CroomManagertest");

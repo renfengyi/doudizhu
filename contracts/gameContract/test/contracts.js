@@ -12,17 +12,17 @@ InitInstance(exports, "InterManager");
 InitInstance(exports, "NotaryManager");
 
 InitInstance(exports, "CurrencyToken");
-InitInstance(exports, "gameToken");
+InitInstance(exports, "gameTokentest");
 let authorityAddr = exports.CurrencyToken.authorityAddress();
 exports.Authority = web3.eth.contract(abis.Authority.abi).at(authorityAddr);
 
 InitInstance(exports, "RoomManager");
 InitInstance(exports, "TableManager");
 InitInstance(exports, "CroomManager");
-InitInstance(exports, "CroomManagerdev");
+InitInstance(exports, "CroomManagertest");
 
 
-let mustDeployed = ["Register", "RoomManager", "gameToken"];
+let mustDeployed = ["Register", "RoomManager", "gameTokentest"];
 mustDeployed.forEach(function(name) {
     let addr = exports[name].address;
     if(web3.ext.emptyaddress(addr) || web3.eth.getCode(addr) == "0x") {
