@@ -1,0 +1,477 @@
+{
+  "contractName": "ERC223Abi",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "who",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.11;\r\n\r\nimport './ERC20Abi.sol';\r\n\r\ncontract ERC223Abi is ERC20Abi {\r\n    function transfer(address to, uint value, bytes data);\r\n}",
+  "sourcePath": "E:\\Code\\src\\coding.xbonline.net\\blockchain\\gameContract\\contracts\\ERC223Abi.sol",
+  "ast": {
+    "absolutePath": "/E/Code/src/coding.xbonline.net/blockchain/gameContract/contracts/ERC223Abi.sol",
+    "exportedSymbols": {
+      "ERC223Abi": [
+        3946
+      ]
+    },
+    "id": 3947,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3933,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "absolutePath": "/E/Code/src/coding.xbonline.net/blockchain/gameContract/contracts/ERC20Abi.sol",
+        "file": "./ERC20Abi.sol",
+        "id": 3934,
+        "nodeType": "ImportDirective",
+        "scope": 3947,
+        "sourceUnit": 3932,
+        "src": "28:24:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3935,
+              "name": "ERC20Abi",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3931,
+              "src": "78:8:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERC20Abi_$3931",
+                "typeString": "contract ERC20Abi"
+              }
+            },
+            "id": 3936,
+            "nodeType": "InheritanceSpecifier",
+            "src": "78:8:3"
+          }
+        ],
+        "contractDependencies": [
+          3931
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 3946,
+        "linearizedBaseContracts": [
+          3946,
+          3931
+        ],
+        "name": "ERC223Abi",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3945,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "transfer",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3943,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3938,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3945,
+                  "src": "112:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3937,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "112:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3940,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3945,
+                  "src": "124:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3939,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "124:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3942,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3945,
+                  "src": "136:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3941,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "136:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "111:36:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3944,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "147:0:3"
+            },
+            "scope": 3946,
+            "src": "94:54:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3947,
+        "src": "56:95:3"
+      }
+    ],
+    "src": "0:151:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/E/Code/src/coding.xbonline.net/blockchain/gameContract/contracts/ERC223Abi.sol",
+    "exportedSymbols": {
+      "ERC223Abi": [
+        3946
+      ]
+    },
+    "id": 3947,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3933,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "absolutePath": "/E/Code/src/coding.xbonline.net/blockchain/gameContract/contracts/ERC20Abi.sol",
+        "file": "./ERC20Abi.sol",
+        "id": 3934,
+        "nodeType": "ImportDirective",
+        "scope": 3947,
+        "sourceUnit": 3932,
+        "src": "28:24:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3935,
+              "name": "ERC20Abi",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3931,
+              "src": "78:8:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERC20Abi_$3931",
+                "typeString": "contract ERC20Abi"
+              }
+            },
+            "id": 3936,
+            "nodeType": "InheritanceSpecifier",
+            "src": "78:8:3"
+          }
+        ],
+        "contractDependencies": [
+          3931
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 3946,
+        "linearizedBaseContracts": [
+          3946,
+          3931
+        ],
+        "name": "ERC223Abi",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3945,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "transfer",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3943,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3938,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3945,
+                  "src": "112:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3937,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "112:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3940,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3945,
+                  "src": "124:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3939,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "124:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3942,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3945,
+                  "src": "136:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3941,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "136:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "111:36:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3944,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "147:0:3"
+            },
+            "scope": 3946,
+            "src": "94:54:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3947,
+        "src": "56:95:3"
+      }
+    ],
+    "src": "0:151:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2019-03-26T07:00:49.195Z"
+}
